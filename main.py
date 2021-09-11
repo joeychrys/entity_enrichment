@@ -13,8 +13,8 @@ app = FastAPI()
 security = HTTPBasic()
 
 def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
-    correct_username = secrets.compare_digest(credentials.username, "nuronapi@test")
-    correct_password = secrets.compare_digest(credentials.password, "qVu8!4$")
+    correct_username = secrets.compare_digest(credentials.username, "test")
+    correct_password = secrets.compare_digest(credentials.password, "1234")
     if not (correct_username and correct_password):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
