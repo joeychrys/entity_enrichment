@@ -33,7 +33,7 @@ def read_item(
     comments: Optional[bool] = True,
 ):
 
-# this is a patch for ncbi becasue it currently does not accept a list
+# this is a patch for ncbi because it currently does not accept a list
   
     params = {
         "query": [query],
